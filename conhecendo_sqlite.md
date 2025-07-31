@@ -168,7 +168,7 @@ Exemplo: foto do perfil.
 - Armazena valores binários simples (0 ou 1).
 Exemplo: flag para "ligado/desligado".
 
-## Cada SGBD (Sistema de Gerenciamento de Banco de Dados) pode ter variações ou tipos específicos. Alguns sistemas, como PostgreSQL ou MySQL, permitem até tipos personalizados.
+### Cada SGBD (Sistema de Gerenciamento de Banco de Dados) pode ter variações ou tipos específicos. Alguns sistemas, como PostgreSQL ou MySQL, permitem até tipos personalizados.
 
 ## SQL: CREATE DATABASE, SCHEMA e TABELAS
 **SQL** é uma linguagem de consulta estruturada que permite criar, modificar e gerenciar bancos de dados e seus objetos. Para criar **tabelas**, **bancos de dados** e **esquemas**, utilizamos o comando `CREATE`. Vamos entender a diferença entre essas estruturas:
@@ -192,7 +192,7 @@ Exemplo: flag para "ligado/desligado".
 
 ## Alterando e Excluindo Tabelas no SQL
 
-## ALTER TABLE — Alterar uma tabela existente
+### ALTER TABLE — Alterar uma tabela existente
 A Hermex Import pediu uma nova coluna chamada Endereço_Cliente na tabela tabelaclientes. Para isso, usamos:
 
 **ALTER TABLE tabelaclientes ADD Endereço_Cliente VARCHAR(250);**
@@ -204,7 +204,7 @@ Explicando:
 
 Após executar, a nova coluna aparecerá na lista da tabela, junto com as anteriores.
 
-## DROP TABLE — Apagar uma tabela inteira
+### DROP TABLE — Apagar uma tabela inteira
 Se quisermos apagar completamente a tabela (com todos os dados e estrutura), usamos:
 
 **DROP TABLE tabelaclientes;**
@@ -225,7 +225,7 @@ Conclusão rápida:
 - Esses comandos são úteis tanto para corrigir quanto para recomeçar parte do seu projeto SQL.
 
 
-## Comando DROP — Apagando objetos do banco
+### Comando DROP — Apagando objetos do banco
 Usado para excluir objetos como tabelas, bancos de dados, esquemas, índices, usuários, etc.
 
 Sintaxe básica:
@@ -244,17 +244,17 @@ Exemplos:
 
 Atenção: Depois que o objeto é apagado, não há volta! Use com muita cautela.
 
-## Comando ALTER — Modificando a estrutura da tabela
+### Comando ALTER — Modificando a estrutura da tabela
 Usado para alterar tabelas já existentes: adicionar, modificar ou remover colunas; também para alterar restrições.
 
-# Adicionar uma coluna:
+### Adicionar uma coluna:
 
 **ALTER TABLE nome_da_tabela ADD nome_da_coluna tipo_de_dado;**
 
 Exemplo:
 **ALTER TABLE Estudantes ADD Idade INT;**
 
-# Removendo uma coluna:
+### Removendo uma coluna:
 
 **ALTER TABLE nome_da_tabela DROP COLUMN nome_da_coluna;**
 
