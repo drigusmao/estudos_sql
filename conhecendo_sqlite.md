@@ -1,7 +1,7 @@
-### O que é um SGBD?
+# O que é um SGBD?
 Um Sistema de Gerenciamento de Banco de Dados (SGBD) é um software que ajuda a armazenar, organizar, proteger e acessar dados de forma rápida e segura. Ele é essencial em qualquer sistema que trabalha com informações — de sites a grandes empresas.
 
-# Principais funções de um SGBD:
+### Principais funções de um SGBD:
 1. Organização estruturada: Armazena dados em tabelas, facilitando buscas e análises.
 2. Segurança: Controla quem pode acessar ou alterar os dados, com senhas, permissões e criptografia.
 3. Consulta rápida: Permite buscar informações específicas com facilidade usando comandos.
@@ -11,14 +11,14 @@ Um Sistema de Gerenciamento de Banco de Dados (SGBD) é um software que ajuda a 
 7. Escalabilidade: Funciona bem mesmo com muitos dados ou usuários.
 8. Backup e restauração: Facilita a criação de cópias de segurança para evitar perdas.
 
-# Exemplos populares de SGBDs:
+### Exemplos populares de SGBDs:
 - **MySQL:** Rápido, confiável e gratuito. Muito usado em sites e sistemas web.
 - **Oracle:** Robusto e usado por grandes empresas. Oferece alta segurança e desempenho.
 - **SQL Server:** Da Microsoft, ótimo para ambientes Windows e integração com outras ferramentas Microsoft.
 - **PostgreSQL:** Gratuito, poderoso e flexível. Suporta recursos avançados e cresce bem com o sistema.
 - **SQLite:** Leve e simples. Usado em apps mobile, navegadores e programas locais.
 
-# Nesse estudo utilizaremos o SQLite
+### Nesse estudo utilizaremos o SQLite
 
 
 ## Importando dados
@@ -42,12 +42,12 @@ A tabela aparecerá na lateral esquerda, pronta para uso.
 
 Exemplo de consulta gerada:
 
-# SELECT * FROM tabelafornecedores;
+### SELECT * FROM tabelafornecedores;
 
 Você verá colunas como:
 ID, Nome_do_fornecedor, País_de_Origem, Informações_de_Contato, Data_de_início
 
-# Entendendo o comando SELECT * FROM
+### Entendendo o comando SELECT * FROM
 
 **SELECT** → significa "selecionar"
 * → significa "todos os dados/colunas"
@@ -56,9 +56,9 @@ ID, Nome_do_fornecedor, País_de_Origem, Informações_de_Contato, Data_de_iníc
 
 Esse comando mostra todos os dados da tabela de pedidos.
 
-# Sempre finalize o comando com ponto e vírgula (;), especialmente quando estiver usando vários comandos juntos. Ele ajuda o sistema a entender onde termina cada instrução.
+### Sempre finalize o comando com ponto e vírgula (;), especialmente quando estiver usando vários comandos juntos. Ele ajuda o sistema a entender onde termina cada instrução.
 
-# Para rodar o código:
+### Para rodar o código:
 Clique em Run ou use o atalho Shift + Enter
 
 
@@ -67,7 +67,7 @@ Clique em Run ou use o atalho Shift + Enter
 ## WHERE
 Para mostrar só os fornecedores cujo país de origem é "China", usamos:
 
-# SELECT * FROM tabelafornecedores WHERE país_de_origem = 'China';
+### SELECT * FROM tabelafornecedores WHERE país_de_origem = 'China';
 
 O que esse comando faz:
 - **SELECT *** → seleciona todos os dados (todas as colunas)
@@ -78,7 +78,7 @@ O que esse comando faz:
 Agora, a Hermex quer saber quais clientes já fizeram pedidos, mas sem listar o mesmo cliente várias vezes.
 Usamos:
 
-# SELECT DISTINCT cliente FROM tabelapedidos;
+### SELECT DISTINCT cliente FROM tabelapedidos;
 
 O que esse comando faz:
 - **SELECT DISTINCT cliente** → seleciona apenas clientes únicos (sem repetições)
@@ -90,7 +90,7 @@ Resultado: uma lista com os IDs dos clientes únicos que compraram.
 ##  Criando Tabelas no SQL 
 A Hermex Import precisava de uma nova tabela para armazenar os dados dos clientes. Eles já têm os IDs dos clientes (vimos isso com o SELECT DISTINCT na tabela de pedidos), mas esses dados ainda não estavam organizados em uma tabela no banco de dados.
 
-# Passo a passo para criar uma tabela:
+### Passo a passo para criar uma tabela:
 
 - Usamos o comando **CREATE TABLE** para iniciar a criação.
 
@@ -104,7 +104,7 @@ Adicionamos as colunas e seus tipos de dados:
 
 Código completo:
 
-# CREATE TABLE tabelaclientes ( ID_Cliente INT PRIMARY KEY, Nome_Cliente VARCHAR(250), Informacoes_de_Contato VARCHAR(250));
+### CREATE TABLE tabelaclientes ( ID_Cliente INT PRIMARY KEY, Nome_Cliente VARCHAR(250), Informacoes_de_Contato VARCHAR(250));
 
 Dica: VARCHAR define texto e o número entre parênteses limita os caracteres.
 
@@ -113,9 +113,9 @@ Vizualizando a nova tabela:
 **SELECT * FROM tabelaclientes;**
 
 
-## Tipos de Dados em Bancos de Dados
+# Tipos de Dados em Bancos de Dados
 
-# Texto (String)
+### Texto (String)
 **CHAR(n)**
 - Armazena texto com tamanho fixo. Ideal quando todos os valores têm o mesmo comprimento.
 Exemplo: códigos de estado como "SP", "RJ".
@@ -128,7 +128,7 @@ Exemplo: nomes de clientes.
 - Armazena grandes volumes de texto.
 Exemplo: descrições de produtos, observações, artigos.
 
-# Numérico
+### Numérico
 **INTEGER (INT)**:
 - Armazena números inteiros (positivos ou negativos).
 Exemplo: quantidade de itens.
@@ -141,7 +141,7 @@ Exemplo: peso, altura.
 - Armazena valores decimais com precisão exata (casas fixas). Ideal para valores financeiros.
 Exemplo: preços, salários.
 
-# Data e Hora
+### Data e Hora
 **DATE**:
 - Armazena apenas data (ano-mês-dia). 
 Exemplo: 2025-07-30.
@@ -154,21 +154,21 @@ Exemplo: 14:30:00.
 - Armazena data e hora juntas.
 Exemplo: 2025-07-30 14:30:00.
 
-# Booleano
+### Booleano
 **BOOLEAN (ou BOOL)**:
 - Armazena valores lógicos: TRUE ou FALSE (ou 1 e 0 dependendo do SGBD).
 Exemplo: cliente_ativo = TRUE
 
-# Binário
+### Binário
 **BLOB (Binary Large Object)**:
 - Armazena arquivos binários, como imagens, vídeos, PDFs.
 Exemplo: foto do perfil.
 
-# BIT:
+### BIT:
 - Armazena valores binários simples (0 ou 1).
 Exemplo: flag para "ligado/desligado".
 
-# Cada SGBD (Sistema de Gerenciamento de Banco de Dados) pode ter variações ou tipos específicos. Alguns sistemas, como PostgreSQL ou MySQL, permitem até tipos personalizados.
+## Cada SGBD (Sistema de Gerenciamento de Banco de Dados) pode ter variações ou tipos específicos. Alguns sistemas, como PostgreSQL ou MySQL, permitem até tipos personalizados.
 
 
 ## SQL: CREATE DATABASE, SCHEMA e TABELAS
@@ -187,7 +187,7 @@ Exemplo: flag para "ligado/desligado".
 - Permite aplicar permissões específicas.
 - É uma estrutura de **nível inferior** em relação ao banco de dados.
 
-### Criando um Banco de Dados
+# Criando um Banco de Dados
 
 **CREATE DATABASE BibliotecaDB;**
 
