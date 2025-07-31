@@ -42,7 +42,7 @@ A tabela aparecerá na lateral esquerda, pronta para uso.
 
 Exemplo de consulta gerada:
 
-### SELECT * FROM tabelafornecedores;
+**SELECT * FROM tabelafornecedores;**
 
 Você verá colunas como:
 ID, Nome_do_fornecedor, País_de_Origem, Informações_de_Contato, Data_de_início
@@ -64,21 +64,21 @@ Clique em Run ou use o atalho Shift + Enter
 
 ## Filtrando e eliminando dados repetidos no SQL
 
-## WHERE
+### WHERE
 Para mostrar só os fornecedores cujo país de origem é "China", usamos:
 
-### SELECT * FROM tabelafornecedores WHERE país_de_origem = 'China';
+**SELECT * FROM tabelafornecedores WHERE país_de_origem = 'China';**
 
 O que esse comando faz:
 - **SELECT *** → seleciona todos os dados (todas as colunas)
 - **FROM tabelafornecedores** → da tabela de fornecedores
 - **WHERE país_de_origem** = 'China' → filtra só os fornecedores da China
 
-## DISTINCT
+### DISTINCT
 Agora, a Hermex quer saber quais clientes já fizeram pedidos, mas sem listar o mesmo cliente várias vezes.
 Usamos:
 
-### SELECT DISTINCT cliente FROM tabelapedidos;
+**SELECT DISTINCT cliente FROM tabelapedidos;**
 
 O que esse comando faz:
 - **SELECT DISTINCT cliente** → seleciona apenas clientes únicos (sem repetições)
@@ -104,7 +104,7 @@ Adicionamos as colunas e seus tipos de dados:
 
 Código completo:
 
-### CREATE TABLE tabelaclientes ( ID_Cliente INT PRIMARY KEY, Nome_Cliente VARCHAR(250), Informacoes_de_Contato VARCHAR(250));
+**CREATE TABLE tabelaclientes ( ID_Cliente INT PRIMARY KEY, Nome_Cliente VARCHAR(250), Informacoes_de_Contato VARCHAR(250));**
 
 Dica: VARCHAR define texto e o número entre parênteses limita os caracteres.
 
@@ -170,17 +170,16 @@ Exemplo: flag para "ligado/desligado".
 
 ## Cada SGBD (Sistema de Gerenciamento de Banco de Dados) pode ter variações ou tipos específicos. Alguns sistemas, como PostgreSQL ou MySQL, permitem até tipos personalizados.
 
-
 ## SQL: CREATE DATABASE, SCHEMA e TABELAS
 **SQL** é uma linguagem de consulta estruturada que permite criar, modificar e gerenciar bancos de dados e seus objetos. Para criar **tabelas**, **bancos de dados** e **esquemas**, utilizamos o comando `CREATE`. Vamos entender a diferença entre essas estruturas:
 
-## Banco de Dados
+### Banco de Dados
 - Uma coleção de dados organizados e relacionados.
 - Atua como um contêiner para objetos como tabelas, índices, procedures e esquemas.
 - Pode conter múltiplos esquemas.
 - É uma entidade de **nível superior** que armazena e gerencia informações em um SGBD.
 
-## Esquema (Schema)
+### Esquema (Schema)
 - Um contêiner lógico para objetos de banco, como tabelas e visões.
 - Usado para organizar e segmentar os objetos dentro de um banco.
 - Vários esquemas podem coexistir em um único banco de dados.
@@ -193,7 +192,7 @@ Exemplo: flag para "ligado/desligado".
 
 ## Alterando e Excluindo Tabelas no SQL
 
-# ALTER TABLE — Alterar uma tabela existente
+## ALTER TABLE — Alterar uma tabela existente
 A Hermex Import pediu uma nova coluna chamada Endereço_Cliente na tabela tabelaclientes. Para isso, usamos:
 
 **ALTER TABLE tabelaclientes ADD Endereço_Cliente VARCHAR(250);**
@@ -260,9 +259,7 @@ Exemplo:
 **ALTER TABLE nome_da_tabela DROP COLUMN nome_da_coluna;**
 
 Exemplo:
-
 **ALTER TABLE Estudantes DROP COLUMN Idade;**
-
 
 Dicas importantes:
 - Sempre teste os comandos ALTER e DROP em ambiente seguro antes de usar em produção.
