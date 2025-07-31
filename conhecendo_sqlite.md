@@ -233,13 +233,13 @@ Sintaxe básica:
 **DROP tipo_do_objeto nome_do_objeto;**
 
 Exemplos:
--- Apagar a tabela Estudantes
+- Apagar a tabela Estudantes
 **DROP TABLE Estudantes;**
 
--- Apagar o banco de dados Colégio_São_Paulo
+- Apagar o banco de dados Colégio_São_Paulo
 **DROP DATABASE Colégio_São_Paulo;**
 
--- Apagar o esquema Turno_da_manhã
+- Apagar o esquema Turno_da_manhã
 **DROP SCHEMA Turno_da_manhã;**
 
 Atenção: Depois que o objeto é apagado, não há volta! Use com muita cautela.
