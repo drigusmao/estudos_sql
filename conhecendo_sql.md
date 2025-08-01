@@ -2,14 +2,14 @@
 Um Sistema de Gerenciamento de Banco de Dados (SGBD) é um software que ajuda a armazenar, organizar, proteger e acessar dados de forma rápida e segura. Ele é essencial em qualquer sistema que trabalha com informações — de sites a grandes empresas.
 
 ### Principais funções de um SGBD:
-1. Organização estruturada: Armazena dados em tabelas, facilitando buscas e análises.
-2. Segurança: Controla quem pode acessar ou alterar os dados, com senhas, permissões e criptografia.
-3. Consulta rápida: Permite buscar informações específicas com facilidade usando comandos.
-4. Acesso simultâneo: Várias pessoas ou sistemas podem usar o banco de dados ao mesmo tempo, sem bagunçar os dados.
-5. Garantia de integridade: Impede que dados errados ou duplicados sejam inseridos.
-6. Proteção contra falhas: Recupera dados em caso de erro ou queda de sistema.
-7. Escalabilidade: Funciona bem mesmo com muitos dados ou usuários.
-8. Backup e restauração: Facilita a criação de cópias de segurança para evitar perdas.
+1. **Organização estruturada**: Armazena dados em tabelas, facilitando buscas e análises.
+2. **Segurança**: Controla quem pode acessar ou alterar os dados, com senhas, permissões e criptografia.
+3. **Consulta rápida**: Permite buscar informações específicas com facilidade usando comandos.
+4. **Acesso simultâneo**: Várias pessoas ou sistemas podem usar o banco de dados ao mesmo tempo, sem bagunçar os dados.
+5. **Garantia de integridade**: Impede que dados errados ou duplicados sejam inseridos.
+6. **Proteção contra falhas**: Recupera dados em caso de erro ou queda de sistema.
+7. **Escalabilidade**: Funciona bem mesmo com muitos dados ou usuários.
+8. **Backup e restauração**: Facilita a criação de cópias de segurança para evitar perdas.
 
 ### Exemplos populares de SGBDs:
 - **MySQL:** Rápido, confiável e gratuito. Muito usado em sites e sistemas web.
