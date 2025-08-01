@@ -75,7 +75,7 @@ O que esse comando faz:
 - **WHERE país_de_origem** = 'China' → filtra só os fornecedores da China
 
 ### DISTINCT
-Agora, a Hermex quer saber quais clientes já fizeram pedidos, mas sem listar o mesmo cliente várias vezes.
+Agora, a emprpesa quer saber quais clientes já fizeram pedidos, mas sem listar o mesmo cliente várias vezes.
 Usamos:
 
 **SELECT DISTINCT cliente FROM tabelapedidos;**
@@ -88,7 +88,7 @@ Resultado: uma lista com os IDs dos clientes únicos que compraram.
 
 
 ##  Criando Tabelas no SQL 
-A Hermex Import precisava de uma nova tabela para armazenar os dados dos clientes. Eles já têm os IDs dos clientes (vimos isso com o SELECT DISTINCT na tabela de pedidos), mas esses dados ainda não estavam organizados em uma tabela no banco de dados.
+A empresa precisava de uma nova tabela para armazenar os dados dos clientes. Eles já têm os IDs dos clientes (vimos isso com o SELECT DISTINCT na tabela de pedidos), mas esses dados ainda não estavam organizados em uma tabela no banco de dados.
 
 ### Passo a passo para criar uma tabela:
 
@@ -193,7 +193,7 @@ Exemplo: flag para "ligado/desligado".
 ## Alterando e Excluindo Tabelas no SQL
 
 ### ALTER TABLE — Alterar uma tabela existente
-A Hermex Import pediu uma nova coluna chamada Endereço_Cliente na tabela tabelaclientes. Para isso, usamos:
+A empresa pediu uma nova coluna chamada Endereço_Cliente na tabela tabelaclientes. Para isso, usamos:
 
 **ALTER TABLE tabelaclientes ADD Endereço_Cliente VARCHAR(250);**
 
@@ -223,7 +223,6 @@ Conclusão rápida:
 - Use ALTER TABLE para modificar uma tabela já criada (como adicionar colunas).
 - Use DROP TABLE para apagar uma tabela inteira.
 - Esses comandos são úteis tanto para corrigir quanto para recomeçar parte do seu projeto SQL.
-
 
 ### Comando DROP — Apagando objetos do banco
 Usado para excluir objetos como tabelas, bancos de dados, esquemas, índices, usuários, etc.
@@ -323,9 +322,9 @@ Criamos a tabela produtos relacionando com as tabelas de categorias e fornecedor
 
 **INSERT INTO** indica que vamos inserir dados.
 
-Entre parênteses, colocamos os nomes das colunas que receberão os dados.
-Depois, com VALUES, colocamos os dados correspondentes na mesma ordem das colunas.
-Textos vão entre aspas simples '...'.
+**Entre parênteses,** colocamos os nomes das colunas que receberão os dados.
+Depois, **com VALUES**, colocamos os dados correspondentes na mesma ordem das colunas.
+**Textos vão entre aspas simples '...'.**
 Números podem ou não ir entre aspas, dependendo do uso.
 Executar o comando para inserir a primeira linha.
 Fazer um SELECT para conferir:
@@ -410,9 +409,7 @@ Exemplo prático para reforçar:
 
 Imagine:
 Tabela clientes_ativos com colunas (id_cliente, nome, status)
-
 Tabela clientes_inativos com mesmas colunas
-
 
 Queremos mover todos os clientes cujo status é 'inativo' para a tabela clientes_inativos:
 
